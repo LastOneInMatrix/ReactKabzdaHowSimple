@@ -1,5 +1,4 @@
 import React, {ChangeEvent, useState} from "react";
-import styles from "EditableSpan.module.css";
 import {TextField} from "@material-ui/core";
 
 type EditableSpanPropsType = {
@@ -9,7 +8,7 @@ type EditableSpanPropsType = {
     // todoListID: string; //todo лучше перенести на вверх что бы меньше пропсов принимать
 }
 
-export function EditableSpan({title, ...props}: EditableSpanPropsType) {
+export function     EditableSpan({title, ...props}: EditableSpanPropsType) {
 
     const [editMode, setEditMode] = useState<boolean>(false); // TODO вторая фнункция созданная useState нужна для того что бы менять стейт
     const [localTitle, setLocalTitle] = useState<string>('');
@@ -32,11 +31,11 @@ export function EditableSpan({title, ...props}: EditableSpanPropsType) {
         editMode ?
             <span>
                   {/*<input type={'text'} value={localTitle} onBlur={activateViewMode} autoFocus onChange={onChangeTitleHandler}/>*/}
-                 <TextField id="outlined-basic" label="Таска" size={'small'} value={localTitle} onBlur={activateViewMode} autoFocus onChange={onChangeTitleHandler}  />
+                 <TextField id="outlined-basic" label="Задача" size={'small'} value={localTitle} onBlur={activateViewMode} autoFocus onChange={onChangeTitleHandler}  />
             </span>
 
             :
             <span onDoubleClick={activateEditMode}>{title}</span>
 
     )
-};
+}

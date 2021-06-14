@@ -1,6 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
-import styles from './AddItemForm.module.css';
 import {TextField} from "@material-ui/core";
+import IconButton from '@material-ui/core/IconButton';
+import AddCircleOutlineTwoToneIcon from '@material-ui/icons/AddCircleOutlineTwoTone';
 
 type AddItemFromPropsType = {
     addItem: (title: string) => void;
@@ -37,10 +38,11 @@ export function AddItemForm(props: AddItemFromPropsType) {
             setError(null);
             props.addItem(tittle.trim());
             setTittle('');
-        };
+        }
     };
     return <div>
         <TextField id="outlined-basic"
+                   title={'Type text...'}
                    label="Make It"
                    variant="outlined"
                    size={'small'}
@@ -48,15 +50,11 @@ export function AddItemForm(props: AddItemFromPropsType) {
                    onChange={onChangeHandler}
                    onKeyPress={onKeyPressHandler}
                    error={error?.isTrue}
-                   helperText={error?.isTrue && 'текст ошибки'}
+                   helperText={error?.isTrue && 'Пожалуйста заполните поле'}
         />
-        {/*<input value={tittle}*/}
-        {/*       onChange={onChangeHandler}*/}
-        {/*       onKeyPress={onKeyPressHandler}*/}
-        {/*       className={error?.isTrue ? styles['error'] : ""}*/}
-        {/*/>*/}
+        <IconButton onClick={addTask} color={'primary'} style={{height: '20px', margin: '10px'}}>
+            <AddCircleOutlineTwoToneIcon/>
+        </IconButton>
 
-        <button onClick={addTask}>+</button>
-        {error?.isTrue && <div className={styles['error-message']}>{error.errorText}</div>}
     </div>
 }

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.main {
+    text-align: center;
+    width: 250px;
+    background-color: #a9b5bd;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    color: aqua;
+    font-family: 'Poppins', sans-serif;
+    border: 1px black solid;
+}
+h3:hover {
+    background-color: #2e6565;
+    cursor: pointer;
+}
+
+li:hover {
+    box-shadow: 2px 5px palevioletred;
+}
+

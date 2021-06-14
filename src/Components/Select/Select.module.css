@@ -1,0 +1,32 @@
+.selectH3 {
+    display: inline-block;
+    border: 1px solid black;
+    /*width: 125px;*/
+    padding-right: 25px;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url("https://st2.depositphotos.com/4060975/8059/v/600/depositphotos_80596510-stock-illustration-down-arrow-vector-icon.jpg");
+}
+.selectH3.active {
+    border: 1px solid red;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAV1BMVEX///8AAAA6Ojr7+/uysrLZ2dmvr6+zs7PY2Njc3NzCwsLu7u7x8fHPz8+ioqLT09OAgIAKCgpOTk5bW1uKiorm5uZubm6VlZVjY2M/Pz8YGBgmJiZFRUUn+g54AAADzUlEQVR4nO2d21rqQAxGpyIiIFBARZT3f869C1Vb2pkmmdSZ9PvXJXKYRZImXKQ6BwAAAAAAAAAAAAAAAAAAAAAAAAAwTdar1/J1tU59jNF4ey9uvL+lPso4LIpfFqkPMwbbosk29XH0eSzaPKU+kDb3gpNT7ApOTLFPcFKK/YITUvQJFsVj6qPp8OQVnEgUFwHBSUTRn6ITiWI4ghNQHIqgeUWKoGlFmqBhRaqgWUW6oFFFjqBJxeE20cZc6w+NapOIIjeC5qLIq0GDUZQJGlKUCppRlAsaUYwRNKEYJ2hAUdImTCnGRjB7xfgIVmTc+v2j2udX56GvT3tRDERwd+k8dNn5n56pYqAG5+6h89iDWxpTDAg+u1mP4czNTSkGI+gxdMu9HcWwoM/QUKIGLjLP1d99hmYSNfCLfn59gtfQSKIGIngTDBiGEjWb1j9QgxUBQwO1OFSDFSHD7GvRH8H9/OdJQcPMa5GQom7IMOtEDU4yvwwYZpyotAgOG2arSBUcNsy0FsmCBMMsa5HSJmoIhqFETdT6B0e1BhTD7BJ1eFRrQDLMbICj12AFzTCrKyqxD35DNMxIkTSqNaAaZlOLvBR1DMNMmgYzRR3HMItEZUeQZZhBFFltooZjmLwWBRFkGiaOImNUa8AzTDrAcUa1BkzDhIkqqcEKrmGyROW3iRq2YaKmIRYUGCZR5I5qDQSGCWpR1CZqJIZ/XouyNlEjMvzjRBW2iRqZ4Z9GcRUlKDUMRXEVq9RmHScoNgwp6q6El97PGa7BCrGhe/Z+chkjdM+L78I92CZq5Ib+prF/kQt12Pi+R6JgjKE/UTdSnR62ns+gpaiLM/Qqam68nyIF4wx9iieJiof+GFJT1MUaempRM4a9dbhkvEGkYX/r16zDvmspPUVdvGFfoqpeS3v6ISNFnYJhT6Kq9sPuTMMTVDDsRlH5Njd3cylTUMPwXlF5Lm3/eNpzLjJXNAzbiTrCHW6Wh+83f2efTcfQzb5vUlQc2N8xiV15PF8+TpI31zH8/zWfPi7nY7kTvJSI5FTX1ykZxpxhXDQN8wSG9oGhfWBoHxjaB4b2gaF9YGgfGNoHhvaBoX1gaB8Y2geG9oGhfWBoHxjaB4b2gaF9YGgfGNoHhvaBoX1gaB8Y2geG9oGhfWBon9m5Y3ielqE7dgyPqY+kTHeBUXd9MD3df/Uw4u5SGg53gofUB1Lnfld5nPW6pLTvbzPCgmR6mou26iuuebAub2uu+1J5STkjXjbb03ajukcPAAAAAAAAAAAAAAAAAAAAAAAAAJAR/wA63ieBmH4PbgAAAABJRU5ErkJggg==");
+}
+
+.items {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    display: none;
+    border: 1px dotted red;
+}
+
+.select.active .items {
+    display: block;
+}
+
+.item.selected {
+    background-color: blue;
+    color: white;
+}
+

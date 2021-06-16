@@ -20,7 +20,7 @@ export const MyAccordion = (props) => {
 
     //ui
     const itemsForUl = items.map((element, index, arr) => {
-        return <li onClick={onLiClickHandler} key={index}>{element.title}</li>;
+        return <li onClick={onLiClickHandler} key={index}>{element.title}</li>
     });
     const style = {
         color: window && '2E6565FF',

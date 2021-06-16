@@ -8,6 +8,7 @@ import {OnOfControll} from "./Components/OnOf/Controll/ControlOnOf";
 import {Counter} from "./Components/Counter/Counter";
 import {InputComponent} from "./Components/Input/Input";
 import {MyAccordion} from "./Components/Accordion/MyAccordion/MyAccordion";
+import {AccordionWithUseReducer} from "./Components/Accordion/AccordionWithUseReducer/AccordionWithUseReduser";
 
 export  type arrForMap = Array<valueType>;
 export type valueType =  number;
@@ -45,7 +46,8 @@ function App() {
         {/*<Counter initValue={0} maxValue={5}/>*/}
         {/*<hr/>*/}
         {/*<InputComponent value={inputValue} setValue={(e) => {setInputValue(e.currentTarget.value)}}/>*/}
-        <MyAccordion items={itemsForMyAccordion} title={'OpenToonz'}/>
+        <MyAccordion items={itemsForMyAccordion} title={'OpenCool'}/>
+        <AccordionWithUseReducer title={'AccordionWithUseReducer'}/>
     </div>
   );
 }

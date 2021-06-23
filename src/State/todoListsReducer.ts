@@ -9,24 +9,27 @@ const CHANGE_TITLE = 'CHANGE_TITLE';
 
 
 //type
-type DeleteTodoListAT = {
+export type DeleteTodoListAT = {
     type: 'DELETE_TODOLIST';
     todoListID: string;
 };
-type AddTodoListAT = {
+export type AddTodoListAT = {
     type: 'ADD_TODOLIST';
+    todoListId: string;
     title: string
-}
+};
+
 type ChangeFilterAT = {
     type: 'CHANGE_FILTER';
     filter: FilterValuesType;
     todoListId: string;
-}
+};
 type ChangeTitleAT = {
     type: 'CHANGE_TITLE';
     todoListID: string;
     newTitle: string;
-}
+};
+
 export type ActionType = ChangeFilterAT | AddTodoListAT | DeleteTodoListAT | ChangeTitleAT;
 
 //mainReducer
@@ -37,9 +40,8 @@ export const todoListsReducer = (todoLists: Array<TodoListType>, action: ActionT
                 return el.id !== action.todoListID;
             })
         case ADD_TODOLIST:
-            const newTodoListID = v1()
             const todoList: TodoListType = {
-                id: newTodoListID,
+                id: action.todoListId,
                 title: action.title,
                 filter: 'all'
             };
@@ -68,6 +70,7 @@ export const removeTodoListAC = (todoListID: string): DeleteTodoListAT => {
 export const addTodoListAC = (title: string): AddTodoListAT => {
     return {
         type: ADD_TODOLIST,
+        todoListId: v1(),
         title
     }
 }

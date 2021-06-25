@@ -10,7 +10,7 @@ type counterPropsType = {
 
 export const Buttons = (props: counterPropsType) => {
    let { value, maximum} = props;
-    console.log(value, maximum)
+
     return  <div className={style.ButtonMain}>
         <button disabled={props.value == 5} onClick={props.setValueOnClick} >INK</button>   <button onClick={props.resetValueOnClick} disabled={props.disabled}>reset</button>
     </div>

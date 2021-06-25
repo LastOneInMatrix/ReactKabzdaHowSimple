@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Story } from '@storybook/react';
 import {Buttons} from './Buttons';
 import {CounterBody} from './CounterBody';
@@ -14,6 +14,15 @@ export type counterPropsType = {
 
 export const Counter = (props: counterPropsType) => {
     let [value, setValue] = useState(0);
+    useEffect(() => {
+        let result = localStorage.getItem('countValue');
+        if (result) {
+            let value = JSON.parse(result);
+            setValue(value);
+        }
+    }, []);
+
+
     let [disabled , setDisabled] = useState(true);
 
     const setValueOnClick = () => {
@@ -22,12 +31,15 @@ export const Counter = (props: counterPropsType) => {
 
         setDisabled(false);
     };
-
-
     const resetValueOnClick = () => {
         setValue(props.initValue);
         setDisabled(true);
-    }
+    };
+    useEffect(() => {
+        localStorage.setItem('countValue', JSON.stringify(value));
+    }, [value]);
+
+
        return  <div className={style.main}>
                  <CounterBody maxValue={props.maxValue} value={value}/>
                 <Buttons  disabled={disabled}value={value} resetValueOnClick={resetValueOnClick} setValueOnClick={setValueOnClick}/>

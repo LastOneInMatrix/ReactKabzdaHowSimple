@@ -4,8 +4,9 @@ import {Body} from "./Body";
 
 const CHANGE_TOGGLE_STATUS = 'CHANGE_TOGGLE_STATUS';
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     title: string;
+    onClick: () => {}
 }
 export type SimpleActionType = {
     type: string;
@@ -20,6 +21,7 @@ const reducer = (state: boolean, action: SimpleActionType) => {
                 return !state
         }
         default:
+            throw new Error('Bad Action');
             return state;
     }
 
@@ -28,7 +30,7 @@ const reducer = (state: boolean, action: SimpleActionType) => {
 
 export const AccordionWithUseReducer = ({title}: AccordionPropsType) => {
     const [collapsed, dispatch] = useReducer(reducer, true)
-       return  <div>;
+       return  <div>
            <Tittle titleValue={title} collapsed={collapsed} dispatch={dispatch}/>
            {collapsed && <Body items={items} />}
         </div>

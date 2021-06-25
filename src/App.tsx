@@ -9,6 +9,8 @@ import {Counter} from "./Components/Counter/Counter";
 import {InputComponent} from "./Components/Input/Input";
 import {MyAccordion} from "./Components/Accordion/MyAccordion/MyAccordion";
 import {AccordionWithUseReducer} from "./Components/Accordion/AccordionWithUseReducer/AccordionWithUseReduser";
+import {Calculator} from "./Components/Calculator/Calculator";
+import {Todolist} from "./Components/LitleTodo/Todolist";
 
 export  type arrForMap = Array<valueType>;
 export type valueType =  number;
@@ -46,8 +48,9 @@ function App() {
         {/*<Counter initValue={0} maxValue={5}/>*/}
         {/*<hr/>*/}
         {/*<InputComponent value={inputValue} setValue={(e) => {setInputValue(e.currentTarget.value)}}/>*/}
-        <MyAccordion items={itemsForMyAccordion} title={'OpenCool'}/>
-        <AccordionWithUseReducer title={'AccordionWithUseReducer'}/>
+        {/*<MyAccordion items={itemsForMyAccordion} title={'OpenCool'}/>*/}
+        {/*<AccordionWithUseReducer title={'AccordionWithUseReducer'}/>*/}
+        <Todolist title={'My TodoList'}/>
     </div>
   );
 }

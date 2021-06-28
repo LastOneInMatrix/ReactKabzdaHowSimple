@@ -2,13 +2,13 @@ import React, {MouseEvent, useState} from "react";
 export default {
     title: 'ReactMemo/Demo',
 }
-type UserType = { id: string, name: string }
+export  type UserType = { id: string, name: string }
 
-type UsersPropsType = {
+export type UsersPropsType = {
     users: Array<UserType>
 }
 type NewMessagesCounterProps = { count: number }
-const usersArr: Array<UserType> = [{id: '1', name: 'As'}, {id: '2', name: 'Bas'}, {id: '3', name: 'Das'}]
+const usersArr: Array<UserType> = [{id: '1', name: 'As'}, {id: '2', name: 'Bs'}, {id: '3', name: 'Ds'}]
 
 
 

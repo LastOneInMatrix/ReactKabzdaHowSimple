@@ -11,6 +11,7 @@ import {MyAccordion} from "./Components/Accordion/MyAccordion/MyAccordion";
 import {AccordionWithUseReducer} from "./Components/Accordion/AccordionWithUseReducer/AccordionWithUseReduser";
 import {Calculator} from "./Components/Calculator/Calculator";
 import {Todolist} from "./Components/LitleTodo/Todolist";
+import {Book} from "./stories/UseCallback/Book";
 
 export  type arrForMap = Array<valueType>;
 export type valueType =  number;
@@ -50,7 +51,8 @@ function App() {
         {/*<InputComponent value={inputValue} setValue={(e) => {setInputValue(e.currentTarget.value)}}/>*/}
         {/*<MyAccordion items={itemsForMyAccordion} title={'OpenCool'}/>*/}
         {/*<AccordionWithUseReducer title={'AccordionWithUseReducer'}/>*/}
-        <Todolist title={'My TodoList'}/>
+        {/*<Todolist title={'My TodoList'}/>*/}
+        <Book/>
     </div>
   );
 }

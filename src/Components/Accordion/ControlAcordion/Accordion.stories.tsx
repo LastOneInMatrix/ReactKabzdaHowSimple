@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Story} from '@storybook/react';
-import {CAccordion , AccordionPropsType } from './Accordion';
 import {action} from "@storybook/addon-actions";
+import {CAccordion , AccordionPropsType } from './Accordion';
+
 
 const onClickCallback =  action('some item was clicked  id is...');
 

@@ -12,6 +12,7 @@ import {AccordionWithUseReducer} from "./Components/Accordion/AccordionWithUseRe
 import {Calculator} from "./Components/Calculator/Calculator";
 import {Todolist} from "./Components/LitleTodo/Todolist";
 import {Book} from "./stories/UseCallback/Book";
+import {ResetEffect} from "./Components/UseEffectExampleCleanUp/ResetEffect";
 
 export  type arrForMap = Array<valueType>;
 export type valueType =  number;
@@ -52,7 +53,8 @@ function App() {
         {/*<MyAccordion items={itemsForMyAccordion} title={'OpenCool'}/>*/}
         {/*<AccordionWithUseReducer title={'AccordionWithUseReducer'}/>*/}
         {/*<Todolist title={'My TodoList'}/>*/}
-        <Book/>
+        {/*<Book/>*/}
+        <ResetEffect/>
     </div>
   );
 }

@@ -39,10 +39,9 @@ export const Book = (props: BookPropsTypes) => {
     },[likeCount]);    //если не добавить зависимости он замемоизирует постоянный вызов к старому Lexical env
 
     const filteredComments = useMemo(() => {
-        let filtered = comments.filter((c) => !c.text.includes('хуй'));
-        return filtered;
-    }, [comments]); // потому что после фильтра тоже постоянно новый массивы, который мы и мемоизируем в зависимости от изменнных комментов
-    console.log(comments); //todo  как сделать так, что бы он не изменял и при commentsax
+        return comments.filter((c) => !c.text.includes('хуй'));
+        }, [comments]); // потому что после фильтра тоже постоянно новый массивы, который мы и мемоизируем в зависимости от изменнных комментов
+
     return <div>
         <Header title={'Book'}/>
         <BookInfo comments={filteredComments} addComments={MemoizedAddComments}/>
